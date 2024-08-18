@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 {
   "dependencies": {
     "bootstrap": "^5.3.3",
     "mathjs": "^13.0.3"
   }
 }
+=======
+{
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "mathjs": "^13.0.3"
+  }
+}
+>>>>>>> 12d2c61d42c4ad45741d8d6c9dc05570d36318f8
