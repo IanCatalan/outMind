@@ -1,22 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const videos = document.querySelectorAll('video')
+    // Selecciona todos los elementos de video en el documento
+    const videos = document.querySelectorAll('video');
 
+    // Función para reproducir todos los videos
     const playAllVideos = () => {
         videos.forEach(video => {
+            // Intenta reproducir el video y maneja cualquier error que ocurra
             video.play().catch(error => {
-                console.error('Error al reproducir el video:', error)
-            })
-        })
-    }
+                console.error('Error al reproducir el video:', error);
+            });
+        });
+    };
 
-    // Esperar a que todos los videos estén cargados
-    let loadedVideos = 0;
+    let readyVideos = 0;
+
+    // Agrega un event listener a cada video para el evento 'canplaythrough'
     videos.forEach(video => {
-        video.addEventListener('loadeddata', () => {
-            loadedVideos++
-            if (loadedVideos === videos.length) {
-                playAllVideos()
+        video.addEventListener('canplaythrough', () => {
+            readyVideos++;
+            
+            // Si todos los videos están listos para reproducirse
+            if (readyVideos === videos.length) {
+                playAllVideos();
             }
         });
     });
+
+    // Manejar el caso donde los videos podrían no disparar 'canplaythrough'
+    videos.forEach(video => {
+        // Asegurarse de que el video esté preparado para reproducirse
+        if (video.readyState >= 3) {
+            // Si el video está suficientemente cargado, contar como listo
+            readyVideos++;
+        }
+    });
+
+    // Si hay videos con estado de carga avanzado, pero no se disparó 'canplaythrough'
+    if (readyVideos === videos.length) {
+        playAllVideos();
+    }
 });

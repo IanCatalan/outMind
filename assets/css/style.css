@@ -38,38 +38,30 @@ p { font-size: calc(1em + 1vw); }
     width: 5rem;
     height: 5rem;
 }
-
-.heroContainer{
-    position: relative;
-    height: 110vh;
-    width: 110vw;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000;
+.sectionHero{
+    width: 120svw;
+    height: 90svh;
 }
-.heroContainer video{
+/* .videoCentro{
+    width: 100svw;
+    height: 19;
+} */
+.posicionScroll video{
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.posicionScroll{
-    translate: none; 
-    rotate: none; 
-    scale: none; 
-    filter: none; 
-    transform: translate(0px, 0px);
+    height: auto;
+    object-fit: cover; 
 }
 .fondonegro{
     background-color: black;
 }
 
-.separacion{
+/* .separacion{
     margin-top: 20px;
     margin-bottom: 20px;
     border-bottom: 2px;
     border-top: 3px;
     border-radius: 10px;
-}
+} */
 .contenido{
     margin-left: 5%;
     margin-right: 5%;
