@@ -271,11 +271,25 @@
 <section id="contacto" class="">
     <footer class="footer d-flex text-center fondonegro">
         <div class="row w-100">
-            <div class="col-12"> <h3 class="text-center fs-1 text-white     py-5">Contacto</h3>
+            <div class="col-12"> <h3 class="text-center fs-1 text-white py-5">Contacto</h3>
                 <div class="col-12 pb-5"> 
                     <form action="https://formsubmit.co/iancatalan07@gmail.com" method="POST" class="text-center">
-                        <input class="formulario text-center" type="text" name="name" required placeholder="¡Cuéntanos tu opinión!">
-                        <input class="formulario text-center ms-3" type="email" name="email" required placeholder="tucorreo@ejemplo.com">
+                        <p class="d-inline-block text-white"> Hola Team Outmind, mi nombre es</p>
+                        <input class="form--floating d-inline-block" type="text" name="name" required placeholder="Tu nombre">
+                        <p class="d-inline-block text-white"> de</p>
+                        <input class="form--floating d-inline-block" type="text" name="name" required placeholder="Tu empresa">
+                        <p class="d-inline-block text-white"> . Estoy buscando realizar nuestro nuevo proyecto en la siguiente área</p>
+                        <select class="form-select d-inline-block" aria-label="Default select example">
+                            <option selected>Servicios</option>
+                            <option value="1">Fotografía</option>
+                            <option value="2">Video</option>
+                            <option value="3">LALALA</option>
+                          </select>
+                        <p class="d-inline-block text-white"> .Les dejo mi correo</p>
+                        <input class="form--floating text-center ms-3" type="email" name="email" required placeholder="tu correo">
+                        <p class="d-inline-block text-white"> y </p>
+                        <input class="form--floating text-center ms-3" type="text" name="telefono" required placeholder="tu teléfono">
+                        <p class="d-inline-block text-white"> para agendar una reunión.</p>
                         <button class="btn border-3 btn-sm botonsend bg-light text-dark" type="submit">Enviar</button>
                         <input type="hidden" name="_autoresponse" value="Gracias por escribirnos, te responderemos a la brevedad">
                         <input type="hidden" name="_captcha" value="true">
